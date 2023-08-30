@@ -32,7 +32,7 @@ echo "***Installed Successfully! BadVPN Port is 7300"
 read -p "Now press Enter to reboot" ans;
 
 case $ans in
-    r|R)
+    Reboot)
         sudo reboot;;
     *)
         exit;;
