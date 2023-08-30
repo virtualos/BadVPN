@@ -5,7 +5,8 @@ sudo apt update && sudo apt upgrade -y && wget https://raw.githubusercontent.com
 ```
 reboot the server!
 
-To check that port 7300 is listening:
+
+To check port 7300 is listening:
 ```shell
 sudo lsof -i -P -n | grep LISTEN
 ```
