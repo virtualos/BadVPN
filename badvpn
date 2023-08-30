@@ -29,7 +29,7 @@ systemctl start videocall
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
 echo "OK, Installed Successfully! BadVPN Port is 7300"
-echo "Now Press r to reboot"
+echo "Now type r then press enter to reboot"
 read -p ans;
 case $ans in
     r|R)
