@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade -y && wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn && bash badvpn
 ```
 reboot the server!
-
+<br>
 To check port 7300 is listening:
 ```shell
 sudo lsof -i -P -n | grep LISTEN
