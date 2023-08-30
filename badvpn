@@ -28,4 +28,5 @@ systemctl start videocall
 rm /root/badvpn
 
 echo "BadVPN Installed Successfully!"
+
 echo "***BadVPN port is 7300"
