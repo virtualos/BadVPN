@@ -1,4 +1,10 @@
 #!/bin/bash
+clear
+udpport=7300
+echo -e "\nPlease input UDPGW Port ."
+printf "Default Port is \e[33m${udpport}\e[0m, let it blank to use this Port: "
+read udpport
+
 apt update && apt upgrade -y
 apt install cmake -y
 apt install screen wget gcc build-essential g++ make -y
@@ -7,7 +13,7 @@ tar xf badvpn-1.999.130.tar.gz
 cd badvpn-1.999.130/
 cmake ~/badvpn-1.999.130 -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
 make install
-badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
+badvpn-udpgw --listen-addr 127.0.0.1:$udpport > /dev/null &
 
 cat >  /etc/systemd/system/videocall.service << ENDOFFILE
 [Unit]
@@ -15,7 +21,7 @@ Description=UDP forwarding for badvpn-tun2socks
 After=nss-lookup.target
 
 [Service]
-ExecStart=/usr/local/bin/badvpn-udpgw --loglevel none --listen-addr 127.0.0.1:7300 --max-clients 999
+ExecStart=/usr/local/bin/badvpn-udpgw --loglevel none --listen-addr 127.0.0.1:$udpport --max-clients 999
 User=videocall
 
 [Install]
@@ -27,4 +33,4 @@ systemctl start videocall
 
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
-echo "OK, Installed Successfully! BadVPN Port is 7300"
+echo "OK, Installed Successfully!"
