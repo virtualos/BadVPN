@@ -6,7 +6,7 @@
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn && bash badvpn
 ```
 
-To check port 7300 is listening:
+To check port listening:
 ```shell
 sudo lsof -i -P -n | grep LISTEN
 ```
