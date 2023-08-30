@@ -1,5 +1,5 @@
 #!/bin/bash
-apt update && apt upgrade -y
+apt update && apt upgrade -y needrestart_suspend
 apt install cmake -y
 apt install screen wget gcc build-essential g++ make -y
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn-1.999.130.tar.gz
@@ -29,9 +29,8 @@ systemctl start videocall
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
 echo "***Installed Successfully! BadVPN Port is 7300"
-echo "Press r to reboot..."
-read -p ans;
-case $ans in
+read -p -s "Press r to reboot" key;
+case $key in
     r|R)
         sudo reboot;;
     *)
