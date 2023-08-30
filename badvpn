@@ -1,6 +1,7 @@
 #!/bin/bash
-apt-get install cmake -y
-apt-get install screen wget gcc build-essential g++ make -y
+apt update && apt upgrade -y
+apt install cmake -y
+apt install screen wget gcc build-essential g++ make -y
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn-1.999.130.tar.gz
 tar xf badvpn-1.999.130.tar.gz
 cd badvpn-1.999.130/
