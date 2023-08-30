@@ -1,5 +1,5 @@
 #!/bin/bash
-apt update && apt upgrade -y needrestart_suspend
+apt update && apt upgrade -y remove needrestart
 apt install cmake -y
 apt install screen wget gcc build-essential g++ make -y
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn-1.999.130.tar.gz
