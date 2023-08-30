@@ -21,7 +21,6 @@ User=videocall
 [Install]
 WantedBy=multi-user.target
 ENDOFFILE
-
 useradd -m videocall
 systemctl enable videocall
 systemctl start videocall
