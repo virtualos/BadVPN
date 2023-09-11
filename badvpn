@@ -2,7 +2,7 @@
 clear
 udpport=7300
 echo -e "\nPlease input UDPGW Port."
-printf "Default Port is $udpport, Enter to use default Port or type your desired port:"
+printf "Default Port is $udpport, Enter to use this Port or type desired port:"
 read udpport
 
 sudo apt update -y
