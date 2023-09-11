@@ -34,4 +34,4 @@ systemctl start videocall
 
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
-echo "\e[32m${Installed Successfully!}\e[0m"
+echo "\e[1;32m${Installed Successfully!}\e[0m"
