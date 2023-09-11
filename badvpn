@@ -2,9 +2,10 @@
 clear
 udpport=7300
 echo -e "\nPlease input UDPGW Port."
-printf "Default Port is \e[33m${udpport}\e[0m, Enter to use this Port or type desired port:"
+printf "Default Port is $udpport, Enter to use default Port or type your desired port:"
 read udpport
 
+sudo apt update -y
 apt install cmake -y
 apt install screen wget gcc build-essential g++ make -y
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn-1.999.130.tar.gz
