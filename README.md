@@ -6,7 +6,7 @@
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn && bash badvpn
 ```
 3. Afterwards **reboot** server.
-
+_____________________________________________
 To check port listening:
 ```shell
 sudo lsof -i -P -n | grep LISTEN
