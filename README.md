@@ -5,7 +5,7 @@
 ```shell
 wget https://raw.githubusercontent.com/virtualos/BadVPN/master/badvpn && bash badvpn
 ```
-**3. Afterwards **reboot** server**
+**3. Afterwards **reboot** server.**
 
 **4. To check port listening:**
 ```shell
