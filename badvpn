@@ -1,10 +1,8 @@
 #!/bin/bash
-apt update && apt upgrade -y
-
 clear
-udpport=7302
+udpport=7300
 echo -e "\nPlease input UDPGW Port."
-printf "Default Port is \e[33m${udpport}\e[0m, Enter to use this Port or type desired port: "
+printf "Default Port is \e[33m${udpport}\e[0m, Enter to use this Port or type desired port:"
 read udpport
 
 apt install cmake -y
@@ -34,4 +32,4 @@ systemctl start videocall
 
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
-echo "\e[1;32m${Installed Successfully!}\e[0m"
+echo "Installed Successfully!"
