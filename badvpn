@@ -7,7 +7,7 @@ tar xf badvpn-1.999.130.tar.gz
 cd badvpn-1.999.130/
 cmake ~/badvpn-1.999.130 -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
 make install
-badvpn-udpgw --listen-addr 127.0.0.1:7302 > /dev/null &
+badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
 rm /root/badvpn && rm /root/badvpn-1.999.130.tar.gz
 
 cat >  /etc/systemd/system/videocall.service << ENDOFFILE
@@ -16,7 +16,7 @@ Description=UDP forwarding for badvpn-tun2socks
 After=nss-lookup.target
 
 [Service]
-ExecStart=/usr/local/bin/badvpn-udpgw --loglevel none --listen-addr 127.0.0.1:7302 --max-clients 999
+ExecStart=/usr/local/bin/badvpn-udpgw --loglevel none --listen-addr 127.0.0.1:7300 --max-clients 999
 User=videocall
 
 [Install]
